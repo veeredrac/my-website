@@ -84,9 +84,30 @@ name:string='';
 price:number=0;
 rating:number=0;
 YES:boolean=true;
-NO:boolean=false;
- insert(){
-  
+No:boolean=false;
+freeDelivery1:boolean=true;
+setFreedelivery(){
+  this.freeDelivery1=true;
 
  }
+ setFreedelivery1(){
+  this.freeDelivery1=false;
+
+ }
+ insert(){
+  
+  let product={
+    ProductName:this.name,
+    Price:this.price,
+    Rating:this.rating,
+    freeDelivery:this.freeDelivery1
+
+  }
+  this.products.unshift(product)
+ }
+ bb1(i:number){
+  this.products.splice(i,1);
+
 }
+}
+

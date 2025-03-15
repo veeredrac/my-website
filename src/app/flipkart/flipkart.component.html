@@ -30,10 +30,10 @@
             <input type="number" [(ngModel)]="rating" ><br>
             <label>Free delivery  : </label>
             <label>YES</label>
-            <input type="radio" name="a"   >
+            <input type="radio" name="a" (click)="setFreedelivery()" >
             <label>NO</label>
-            <input type="radio" name="a"><br>
-            <input type="button" (click)="insert()" value="Add to cart">
+            <input type="radio" name="a" (click)="setFreedelivery1()" ><br>
+            <input type="button" (click)="insert()" value="Add to cart" [disabled]="!name||!price||!rating">
         </div>
     </div>
     <div>
@@ -55,7 +55,7 @@
                 <td>{{product.Rating}}</td>
                 <td>{{product.freeDelivery}}</td>
                 <td>
-                    <button style="background-color: rgb(235, 11, 11); width: 50px;color: white;">Delete</button>
+                    <button (click)="bb1(i)" style="background-color: rgb(235, 11, 11); width: 50px;color: white;">Delete</button>
                 </td>
             </tr>
         </table>
