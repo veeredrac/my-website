@@ -3,40 +3,62 @@
     <div class="d2">
         <div class="d2left">
             <div class="search">
-                <input class="searchbarsize" type="text" placeholder="search">
-                <button >only free delivery</button>
+                <input class="searchbarsize" type="text" placeholder="search"[(ngModel)]="term" (keyup)="search()">
+                <button (click)="search1()" >only free delivery</button>
             </div>
             <div class="search1">
-                <button class="fliterb1">Price low to high</button>
-                <button class="fliterb1">Price high to low</button>
-                <button class="fliterb1">Price low to high</button>
-                <button class="fliterb1">Price high to low</button>
+                <button class="fliterb1" (click)="check1()">Price low to high</button>
+                <button class="fliterb1" (click)="check2()">Price high to low</button>
+                <button class="fliterb1" (click)="check3()">Price low to high</button>
+                <button class="fliterb1" (click)="check4()">Price high to low</button>
             </div>
             <div class="search2">
-                <button class="search2b1">Apply 50% discount</button>
-                <button class="search2b1">Price with delivery charges</button>
+                <button class="search2b1" (click)="apply1()">Apply 50% discount</button>
+                <button class="search2b1" (click)="apply2()">Price with delivery charges</button>
             </div>
             <div class="search3">
-                <button class="search3b1">total Price</button>
-                <button class="search3b1">total cart items</button>
+                <button class="search3b1" (click)="total()">total Price</button>
+                <button class="search3b1"(click)="totalCartItems()">total cart items</button>
             </div>
         </div>
         <div class="d2right">
             <label>Name :</label>
-            <input type="text"><br>
+            <input type="text" [(ngModel)]="name" ><br>
             <label>Price :</label>
-            <input type="number"><br>
+            <input type="number" [(ngModel)]="price"><br>
             <label>Rating :</label>
-            <input type="number"><br>
-            <label>Free delivery  :</label>
+            <input type="number" [(ngModel)]="rating" ><br>
+            <label>Free delivery  : </label>
             <label>YES</label>
-            <input type="radio">
+            <input type="radio" name="a"   >
             <label>NO</label>
-            <input type="radio"><br>
-            <input type="button" value="Add to cart">
+            <input type="radio" name="a"><br>
+            <input type="button" (click)="insert()" value="Add to cart">
         </div>
     </div>
     <div>
+
+        <table class="tableSize" border="2px" [cellPadding]="10" [cellSpacing]="0">
+            <tr>
+                <th>S NO</th>
+                <th>Product Name</th>
+                <th>Price</th>
+                <th>Rating</th>
+                <th>Free delivery</th>
+                <th>Action</th>
+                
+            </tr>
+            <tr *ngFor="let product of products;let i=index" >  
+                <td>{{i+1}}</td>
+                <td>{{product.ProductName}}</td>
+                <td>{{product.Price}}</td>
+                <td>{{product.Rating}}</td>
+                <td>{{product.freeDelivery}}</td>
+                <td>
+                    <button style="background-color: rgb(235, 11, 11); width: 50px;color: white;">Delete</button>
+                </td>
+            </tr>
+        </table>
 
     </div>
 </div>
