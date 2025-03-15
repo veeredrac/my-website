@@ -1,0 +1,11 @@
+<div class="parent">
+    <div class="EmiDiv">
+        <h2>SI Calcultor</h2>
+        <input type="number" placeholder="Enter principle loan amount" [(ngModel)]="p"><br>
+        <input type="number" placeholder="Enter Rate of interest period" [(ngModel)]="r"><br>
+        <input type="number" placeholder="Enter Number of perionds" [(ngModel)]="t"><br>
+        <button (click)="si()">Calculte</button>
+        <h1>SI Amount : {{siamount}}</h1>
+    </div>
+</div>
+

@@ -1,0 +1,29 @@
+.MainCal{
+    width: 80vw;
+   height: 99vh;
+    background-color: cornsilk;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.maindiv{
+    width: 50%;
+    height: 50%;
+    background-color: chocolate;
+    text-align: center;
+    margin: 10px;
+    border-radius: 25px;
+    box-shadow: -30px -30px black;
+    }
+.maindiv input,button,h1{
+    margin: 8px;
+}
+.maindiv input,button{
+    width: 80%;
+    height: 25px;
+    border-radius: 25px;
+}
+.maindiv:hover{
+    background-image: linear-gradient(rgb(232, 127, 127),rgb(102, 102, 235));
+   color: black; 
+}

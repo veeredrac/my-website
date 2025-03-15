@@ -1,0 +1,22 @@
+.parent{
+    padding: 0;
+    margin: 0;
+    width: 80vw;
+    height: 99%;
+    background-color: rgb(143, 222, 133);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.EmiDiv{
+    width: 350px;
+    height: 350px;
+    background-color: rgb(155, 18, 209);
+    text-align: center;
+    border-radius: 25px;
+   
+}
+.EmiDiv input,button{
+    margin: 5px;
+
+}

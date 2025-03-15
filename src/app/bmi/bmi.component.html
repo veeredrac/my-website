@@ -1,0 +1,9 @@
+<div class="DivMain">
+    <div class="DivMain1">
+<input type="text"  placeholder="Enter a weight" [(ngModel)]="weight"><br>
+<input type="text"  placeholder="Enter a height "[(ngModel)]="height"><br>
+<button (click)="Bmi()" [disabled]="!weight || !height" >check BMI value</button><br>
+<h1 id="h1"> bmi Value :{{bmi}}</h1>
+</div>
+</div>
+

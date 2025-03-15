@@ -1,0 +1,8 @@
+h1{
+    text-align: center;
+}
+.MainBody{
+    width: 100vw;
+    height: 95vh;
+    background-color: darkorange;
+}

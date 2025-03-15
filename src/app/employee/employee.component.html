@@ -1,0 +1,44 @@
+<h1>Employee data </h1>
+<label >Empolyee Name</label>
+<input type="text" [(ngModel)]="name"><br>
+<label >Empolyee Experience</label>
+<input type="text" [(ngModel)]="experience"><br>
+<label >Empolyee Package</label>
+<input type="text" [(ngModel)]="package"><br>
+<label >Empolyee Role</label>
+<input type="text" [(ngModel)]="EmpRole"><br>
+<button (click)="create()">create Empolye</button><br><br>
+
+
+
+<input type="text" placeholder="Enter the value to serach" [(ngModel)]="term" (keyup)="search()">
+<button (click)="sort()">Package low to high</button>
+<button (click)="map()">Add hike 30K </button>
+<button (click)="reduce()">Cost to Company</button>
+<select [(ngModel)]='role' (change)="filter()">
+    <option>UIDeveloper</option>
+    <option>Software Developer</option>
+    <option>Data engineer</option>
+    <option>Testing Engineer</option>
+</select>
+<table border="2px" [cellPadding]="10" [cellSpacing]="0">
+    <tr>
+        <th>S NO</th>
+        <th>Name</th>
+        <th>Experience</th>
+        <th>package</th>
+        <th>Role</th>
+        <th>Action</th>
+        
+    </tr>
+    <tr *ngFor="let employee of employees;let i=index">  
+        <td>{{i+1}}</td>
+        <td>{{employee.name}}</td>
+        <td>{{employee.experience}}</td>
+        <td>{{employee.package}}</td>
+        <td>{{employee.role}}</td>
+        <td>
+            <button (click)="delete(i)">Delete</button>
+        </td>
+    </tr>
+</table>

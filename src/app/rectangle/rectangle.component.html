@@ -1,0 +1,9 @@
+<div class="MainCal">
+    <div class="maindiv">
+    <h1>Rectangle </h1>
+    <input type="number" placeholder="enter width" id="n1" [(ngModel)]="width"><br>
+    <input type="number" placeholder="enter height" id="n2" [(ngModel)]="height"><br>
+    <button (click)="area()" [disabled]="!width || !height">Area of Rectangle</button>
+   <h1>Area of Rectangle is :{{AreaOfRectangle}}</h1>
+</div>      
+</div>

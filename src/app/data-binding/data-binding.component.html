@@ -1,0 +1,27 @@
+<h1>data binding </h1>
+<!-- event binding -->
+<button (click)="click()">Click Me !</button>
+<input type="text" (keyup)="submit()">
+
+<!-- interpolation  -->
+ <h1>Name :{{name}}</h1>
+ <h3>Age :{{age}}</h3>
+
+ <!-- property binding[] -->
+  <button [disabled]="isData">submit</button>
+  <!-- two way data binding [(ngModel)] -->
+   <input type="text" [(ngModel)]="mobile" (keyup)="submit()">
+
+   <!-- calculator  -->
+    <h1>calculator</h1>
+    <h1>{{result}}</h1>
+    <label for="">Number1</label>
+    <input type="number" [(ngModel)]="num1"><br>
+    <label for="">Number2</label>
+    <input type="number" [(ngModel)]="num2"><br>
+    <button (click)="add()" [disabled]="!num1 || !num2">Add</button>
+    <button (click)="sub()" [disabled]="!num1 || !num2">sub</button>
+    <button (click)="mul()" [disabled]="!num1 || !num2">mul</button>
+    <button (click)="div()" [disabled]="!num1 || !num2">div</button>
+
+

@@ -1,0 +1,10 @@
+<div class="parent">
+    <div class="EmiDiv">
+        <h2>Emi Calcultor</h2>
+        <input type="number" placeholder="Enter principle loan amount" [(ngModel)]="principle"><br>
+        <input type="number" placeholder="Enter Rate of interest period" [(ngModel)]="Rate"><br>
+        <input type="number" placeholder="Enter Number of perionds" [(ngModel)]="perionds"><br>
+        <button (click)="Emi()">Calculte Emi amount </button>
+        <h1>Emi total Amount : {{emi}}</h1>
+    </div>
+</div>

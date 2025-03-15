@@ -1,0 +1,58 @@
+.mainDiv{
+    width: 100vw;
+    height: 100vh;
+    background-color: aquamarine;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#div1{
+    width: 400px;
+    height: 350px;
+    background-color: rgb(256, 256, 256);
+    margin: 30%;
+    border-radius: 25px;
+    text-align: center;
+   
+ 
+
+}
+.size{
+   width:80%;
+   height: 40px;
+  margin-left: 25px;
+  border-radius:25px;
+
+
+}
+#heading1{
+   text-align: center;
+}
+#b1{
+   background-color:blue;
+   color: white;
+   width:80%;
+   height: 40px;
+}
+button{
+   border-radius: 100% ;
+   width: 150px;
+   height: 20px;
+   margin-left: 25px;
+   border-radius:25px;
+   box-shadow: none;
+}
+.logo{
+   width: 10px;
+   height: 10px;
+   color: white;
+}
+#cb1{
+   background-color:blue;
+}
+#cb2{
+   background-color:blue;
+}
+.textcol{
+   color: white;
+}

@@ -1,0 +1,12 @@
+<div class="MainCal">
+    <div class="maindiv">
+    <h1>Calculator </h1>
+    <input type="number" id="n1" [(ngModel)]="n1"><br>
+    <input type="number" id="n2" [(ngModel)]="n2"><br>
+    <button (click)="add()" [disabled]="!n1 || !n2">Add</button>
+    <button (click)="mul()" [disabled]="!n1 || !n2">mul</button>
+    <button (click)="sub()" [disabled]="!n1 || !n2" >sub</button>
+    <button (click)="div()" [disabled]="!n1 || !n2">div</button>
+    <h2 id="reslut">result :{{result}}</h2>
+</div>      
+</div>
