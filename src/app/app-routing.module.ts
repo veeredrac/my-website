@@ -14,6 +14,7 @@ import { RectangleComponent } from './rectangle/rectangle.component';
 import { SimpleInterestComponent } from './simple-interest/simple-interest.component';
 import { TemperatureComponent } from './temperature/temperature.component';
 import { WelcomeComponent } from './welcome/welcome.component';
+import { FlipkartComponent } from './flipkart/flipkart.component';
 
 const routes: Routes = [
   {path:'dashborad', component:DashboardComponent,children:[
@@ -29,6 +30,7 @@ const routes: Routes = [
   {path:'simple-interest', component:SimpleInterestComponent},
   {path:'temperature', component:TemperatureComponent},
   {path:'welcome', component:WelcomeComponent},
+  {path:'flipkart', component:FlipkartComponent},
   ]},
  
   {path:'home', component:HomeComponent},

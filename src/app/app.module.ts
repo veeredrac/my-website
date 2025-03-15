@@ -18,6 +18,7 @@ import { SimpleInterestComponent } from './simple-interest/simple-interest.compo
 import { TemperatureComponent } from './temperature/temperature.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { FormsModule } from '@angular/forms';
+import { FlipkartComponent } from './flipkart/flipkart.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { FormsModule } from '@angular/forms';
     RectangleComponent,
     SimpleInterestComponent,
     TemperatureComponent,
-    WelcomeComponent
+    WelcomeComponent,
+    FlipkartComponent
   ],
   imports: [
     BrowserModule,

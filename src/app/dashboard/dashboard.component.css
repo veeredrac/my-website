@@ -13,6 +13,7 @@
     width: 20%;
     height: 100%;
     background-color: rgb(101, 100, 102);
+    overflow: auto;
 }
 .d1{
     width: 100%;
@@ -22,18 +23,22 @@
 }
 .d2{
     width: 100%;
-    height: 60%;
+    height: 55%;
     color: white;
     text-align: center;
+  
   
 }
 .d3{
     width: 100%;
-    height: 20%;
+    height: 60%;
     text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
+   margin-bottom: 0;
+  
+
 }
 .d3 button{
    width: 150px;     
