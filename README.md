@@ -20,3 +20,23 @@ what is API :
        300+ status  code : derireact error 
        400+ status code  : client side error 
        500+ status code  : server side errors 
+
+
+Rx JS librarry :  it will perform asyncrone operation 
+
+ promise                                         
+              (it static operation= one callback ) 
+
+
+ objecerable   :    (flipkart operation = multiple callback and get back normation call backs , giving the operation in indivisual it is unicast )
+
+
+ subject : live stream / flm is example { multiple callbacks and multi cast }
+
+
+  flow for form 
+              HTML ====> TS ===> service ====> API 
+  flow for Table 
+               API ===> service ====> TS ====> HTML 
+
+create API : 

@@ -19,6 +19,7 @@ import { TemperatureComponent } from './temperature/temperature.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { FormsModule } from '@angular/forms';
 import { FlipkartComponent } from './flipkart/flipkart.component';
+import { VehicleComponent } from './vehicle/vehicle.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { FlipkartComponent } from './flipkart/flipkart.component';
     SimpleInterestComponent,
     TemperatureComponent,
     WelcomeComponent,
-    FlipkartComponent
+    FlipkartComponent,
+    VehicleComponent
   ],
   imports: [
     BrowserModule,
