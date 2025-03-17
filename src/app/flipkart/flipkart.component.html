@@ -9,8 +9,8 @@
             <div class="search1">
                 <button class="fliterb1" (click)="check1()">Price low to high</button>
                 <button class="fliterb1" (click)="check2()">Price high to low</button>
-                <button class="fliterb1" (click)="check3()">Price low to high</button>
-                <button class="fliterb1" (click)="check4()">Price high to low</button>
+                <button class="fliterb1" (click)="check3()">Rating low to high</button>
+                <button class="fliterb1" (click)="check4()">Rating high to low</button>
             </div>
             <div class="search2">
                 <button class="search2b1" (click)="apply1()">Apply 50% discount</button>
@@ -45,7 +45,8 @@
                 <th>Price</th>
                 <th>Rating</th>
                 <th>Free delivery</th>
-                <th>Action</th>
+                <th>Delete</th>
+                <th>Update</th>
                 
             </tr>
             <tr *ngFor="let product of products;let i=index" >  
@@ -57,6 +58,11 @@
                 <td>
                     <button (click)="bb1(i)" style="background-color: rgb(235, 11, 11); width: 50px;color: white;">Delete</button>
                 </td>
+                <td>
+                    <button (click)="bb2(i)" style="background-color: rgb(52, 8, 213); width: 50px;color: white;">edit</button>
+                </td>
+
+
             </tr>
         </table>
 

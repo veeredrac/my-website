@@ -105,8 +105,15 @@ setFreedelivery(){
   }
   this.products.unshift(product)
  }
+ 
  bb1(i:number){
   this.products.splice(i,1);
+
+}
+bb2(i:number){
+  this.products.splice(i,1);
+
+  
 
 }
 }
