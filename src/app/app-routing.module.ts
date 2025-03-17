@@ -15,6 +15,7 @@ import { SimpleInterestComponent } from './simple-interest/simple-interest.compo
 import { TemperatureComponent } from './temperature/temperature.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { FlipkartComponent } from './flipkart/flipkart.component';
+import { VehicleComponent } from './vehicle/vehicle.component';
 
 const routes: Routes = [
   {path:'dashborad', component:DashboardComponent,children:[
@@ -31,6 +32,7 @@ const routes: Routes = [
   {path:'temperature', component:TemperatureComponent},
   {path:'welcome', component:WelcomeComponent},
   {path:'flipkart', component:FlipkartComponent},
+  {path:'vehicle', component:VehicleComponent}
   ]},
  
   {path:'home', component:HomeComponent},

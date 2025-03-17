@@ -20,6 +20,7 @@ import { WelcomeComponent } from './welcome/welcome.component';
 import { FormsModule } from '@angular/forms';
 import { FlipkartComponent } from './flipkart/flipkart.component';
 import { VehicleComponent } from './vehicle/vehicle.component';
+import { HttpClientModule } from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -44,7 +45,8 @@ import { VehicleComponent } from './vehicle/vehicle.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
