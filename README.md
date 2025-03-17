@@ -39,4 +39,20 @@ Rx JS librarry :  it will perform asyncrone operation
   flow for Table 
                API ===> service ====> TS ====> HTML 
 
-create API : 
+
+service
+API
+Rx JS librarry
+
+flow for form 
+              HTML ====> TS ===> service ====> API 
+  flow for Table 
+               API ===> service ====> TS ====> HTML 
+
+ get(getting data from APi ) , 
+                               post (sending data from API ) ,
+                               put(it using for updating data ) / patch(modifying particualar data from API) ,
+                               delete(deleting or deleting  the data from API )    in API using this methods . 
+
+
+

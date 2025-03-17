@@ -1,0 +1,21 @@
+<h1>BankAccountDetails</h1>
+<table class="table table-dark">
+    <thead>
+    <tr class="danger">
+        <th>S NO</th>
+        <th>account_name</th>
+        <th>account_number</th>
+        <th>available_balance</th>
+        <th>city</th>
+    </tr>
+</thead>
+<tbody>
+    <tr *ngFor="let bandetail of bandetails,let i=index">
+        <td>{{i+1}}</td>
+        <td>{{bandetail.account_name}}</td>
+        <td>{{bandetail.account_number}}</td>
+        <td>{{bandetail.available_balance}}</td>
+        <td>{{bandetail.city}}</td>
+    </tr>
+</tbody>
+</table>

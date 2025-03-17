@@ -21,6 +21,8 @@ import { FormsModule } from '@angular/forms';
 import { FlipkartComponent } from './flipkart/flipkart.component';
 import { VehicleComponent } from './vehicle/vehicle.component';
 import { HttpClientModule } from "@angular/common/http";
+import { BankAccountDetailsComponent } from './bank-account-details/bank-account-details.component';
+import { FlipkartDetailsComponent } from './flipkart-details/flipkart-details.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +42,9 @@ import { HttpClientModule } from "@angular/common/http";
     TemperatureComponent,
     WelcomeComponent,
     FlipkartComponent,
-    VehicleComponent
+    VehicleComponent,
+    BankAccountDetailsComponent,
+    FlipkartDetailsComponent
   ],
   imports: [
     BrowserModule,
