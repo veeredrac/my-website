@@ -17,6 +17,7 @@ import { WelcomeComponent } from './welcome/welcome.component';
 import { FlipkartComponent } from './flipkart/flipkart.component';
 import { VehicleComponent } from './vehicle/vehicle.component';
 import { BankAccountDetailsComponent } from './bank-account-details/bank-account-details.component';
+import { FlipkartDetailsComponent } from './flipkart-details/flipkart-details.component';
 
 const routes: Routes = [
   {path:'dashborad', component:DashboardComponent,children:[
@@ -34,7 +35,8 @@ const routes: Routes = [
   {path:'welcome', component:WelcomeComponent},
   {path:'flipkart', component:FlipkartComponent},
   {path:'vehicle', component:VehicleComponent},
-  {path:'bankaccountDetails', component:BankAccountDetailsComponent}
+  {path:'bankaccountDetails', component:BankAccountDetailsComponent},
+  {path:'flipkartDetails', component:FlipkartDetailsComponent}
   ]},
   {path:'home', component:HomeComponent},
   {path:'login', component:LoginComponent},
