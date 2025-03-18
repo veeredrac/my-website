@@ -23,6 +23,8 @@ import { VehicleComponent } from './vehicle/vehicle.component';
 import { HttpClientModule } from "@angular/common/http";
 import { BankAccountDetailsComponent } from './bank-account-details/bank-account-details.component';
 import { FlipkartDetailsComponent } from './flipkart-details/flipkart-details.component';
+import { EmailComponent } from './email/email.component';
+import { PinterestComponent } from './pinterest/pinterest.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +46,9 @@ import { FlipkartDetailsComponent } from './flipkart-details/flipkart-details.co
     FlipkartComponent,
     VehicleComponent,
     BankAccountDetailsComponent,
-    FlipkartDetailsComponent
+    FlipkartDetailsComponent,
+    EmailComponent,
+    PinterestComponent
   ],
   imports: [
     BrowserModule,

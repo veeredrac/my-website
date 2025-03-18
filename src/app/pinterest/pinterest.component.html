@@ -1,0 +1,12 @@
+<div class="mainBody">
+    <div class="pinterestDiv" *ngFor="let pinterestdata of pinterestdatas">
+
+      <div class="d1"><img class="i1" [src]="pinterestdata.download_url" alt="">
+        <a [href]="pinterestdata.url"><a id="a" class="btn btn-primary" >Download</a></a>
+        <p class="authorDetails">{{pinterestdata.author}}</p>
+    </div>
+        
+        
+    </div>
+
+</div>

@@ -1,0 +1,8 @@
+<h1>Email details </h1>
+<div class="d1"  >
+    <Div  [ngStyle]="{'color':flipkartdetail.completed?'gray':'black'}" bclass="parent" *ngFor="let flipkartdetail of emailDetails" >
+            <label >{{flipkartdetail.id}}  &nbsp;&nbsp;</label>
+            <label>{{flipkartdetail.title}}</label>
+
+        </Div>
+</div>

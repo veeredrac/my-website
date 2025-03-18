@@ -1,11 +1,11 @@
 <h1>Flipkart details </h1>
 <div class="bodyMain">
-<Div id="parent" *ngFor="let flipkartdetail of flipkartetails">
-    <Div class="d1"> <img class="i1" [src]="flipkartdetail.image" alt=""><br>
+<div id="parent" *ngFor="let flipkartdetail of flipkartetails">
+    <div class="d1"> <img class="i1" [src]="flipkartdetail.image" alt=""><br>
         <div class="d2">{{flipkartdetail.category}}</div><br>
-        <div class="d3">{{flipkartdetail.title}}</div><br><br>
+        <div class="d3">{{flipkartdetail.title |slice:0:50 }}<div><br>
         <div class="d4">RS :{{flipkartdetail.price}}</div><br>
         <div class="d5">{{flipkartdetail.rating.rate}}</div><br>
-    </Div>
-</Div>
+    </div>
+</div>
 </div>

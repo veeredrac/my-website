@@ -11,7 +11,7 @@ export class FlipkartDetailsComponent {
   flipkartetails:any=[];
   constructor(private _flipkartDetailsService:FlipkartDetailsService){
     _flipkartDetailsService.getflpkartDetails().subscribe(
-    (data:any)=>{
+    (data:any)=>{ 
       console.log(data);
       this.flipkartetails=data;
     },

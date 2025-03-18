@@ -10,7 +10,7 @@ export class FlipkartDetailsService {
   constructor( private  _httpsClient:HttpClient ) { }
 
     getflpkartDetails():Observable<any>{ 
-      return this._httpsClient.get("https://fakestoreapi.com/products")
+      return this._httpsClient.get("https://fakestoreapi.com/products")    
     }
   
 }
