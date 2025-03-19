@@ -11,16 +11,7 @@ export class VehicleComponent {
   term:string='';
   vehicles:any=[];
   constructor(private _vehicleService:VehicleService){
-    _vehicleService.getVehicles().subscribe(
-      (data:any)=>{
-        console.log(data);
-        this.vehicles=data;
-      },
-      (err:any)=>{
-        alert("internal server Error")
-      }
-    );
-
+    this.loadVehicle();
   }
   filter(){
   this._vehicleService.getFiltervehicleDetails(this.term).subscribe(
@@ -51,15 +42,49 @@ sort(){
     )
   }
 
+  loadVehicle(){
+    this._vehicleService.getVehicles().subscribe(
+      (data:any)=>{
+        console.log(data);
+        this.vehicles=data;
+      },
+      (err:any)=>{
+        alert("internal server Error")
+      }
+    );
+  }
+
   delete(id:any){
+
+    if(confirm("are sure to delete ?")==true){
     this._vehicleService.deleteVehicledetails(id).subscribe(
       (data:any)=>{
         alert("record deleted successfully ")
+        this.loadVehicle();
       },
       (err:any)=>{
         alert("internal server Error")
       }
     )
+  }
+    else{
+      alert("your have cancelled ...!")
+    }
 
+  }
+  limit:string='';
+  page:string='';
+  pagination()
+  {
+    
+    this._vehicleService.getpaginationvehicleDetails(this.limit,this.page).subscribe(
+      (data:any)=>{
+        console.log(data);
+        this.vehicles=data;
+      },
+      (err:any)=>{
+        alert("internal Server Error ")
+      }
+    )
   }
 }

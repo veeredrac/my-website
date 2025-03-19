@@ -59,8 +59,8 @@ flow for form
   Possible Api calls :
 1) all            get => get(URL)
 2) specific       get => get(URL)
-3) filtering      get => get(URL)
-4) sorting        get => get(URL)
+3) filtering      get => get(URL ? filter=term)
+4) sorting        get => get(URL ?sortBy=columan&order)
 5) pagination     get => get(URL) 
 
 
