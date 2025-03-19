@@ -25,6 +25,8 @@ import { BankAccountDetailsComponent } from './bank-account-details/bank-account
 import { FlipkartDetailsComponent } from './flipkart-details/flipkart-details.component';
 import { EmailComponent } from './email/email.component';
 import { PinterestComponent } from './pinterest/pinterest.component';
+import { WeatherComponent } from './weather/weather.component';
+import { ErrorComponent } from './error/error.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +50,9 @@ import { PinterestComponent } from './pinterest/pinterest.component';
     BankAccountDetailsComponent,
     FlipkartDetailsComponent,
     EmailComponent,
-    PinterestComponent
+    PinterestComponent,
+    WeatherComponent,
+    ErrorComponent
   ],
   imports: [
     BrowserModule,

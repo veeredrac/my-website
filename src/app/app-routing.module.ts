@@ -20,8 +20,11 @@ import { BankAccountDetailsComponent } from './bank-account-details/bank-account
 import { FlipkartDetailsComponent } from './flipkart-details/flipkart-details.component';
 import { EmailComponent } from './email/email.component';
 import { PinterestComponent } from './pinterest/pinterest.component';
+import { WeatherComponent } from './weather/weather.component';
+import { ErrorComponent } from './error/error.component';
 
 const routes: Routes = [
+  {path:'', component:ErrorComponent},
   {path:'dashborad', component:DashboardComponent,children:[
 
     {path:'bmi', component:BmiComponent},
@@ -40,7 +43,8 @@ const routes: Routes = [
   {path:'bankaccountDetails', component:BankAccountDetailsComponent},
   {path:'flipkartDetails', component:FlipkartDetailsComponent},
   {path:'emails', component:EmailComponent},
-  {path:'pinterest', component:PinterestComponent}
+  {path:'pinterest', component:PinterestComponent},
+  {path:'weather', component:WeatherComponent}
   ]},
   {path:'home', component:HomeComponent},
   {path:'login', component:LoginComponent},

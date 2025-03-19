@@ -8,8 +8,20 @@ import { Observable } from 'rxjs';
 export class VehicleService {
 
   constructor(private _httpClient:HttpClient) { }
-  
+   
   getVehicles():Observable<any>{ 
     return this._httpClient.get("https://6128991386a213001729f9df.mockapi.io/test/v1/jurisdiction")
+  }
+
+  getFiltervehicleDetails( term:any):Observable<any>{
+    return this._httpClient.get("https://6128991386a213001729f9df.mockapi.io/test/v1/jurisdiction?filter="+term)
+  }
+
+  getSortvehicleDetails(column:any,order:any):Observable<any>{
+    return this._httpClient.get("https://6128991386a213001729f9df.mockapi.io/test/v1/jurisdiction?sortBy="+column+"&order="+order)
+  }
+
+  deleteVehicledetails(id:any):Observable<any>{ 
+    return this._httpClient.get("https://6128991386a213001729f9df.mockapi.io/test/v1/jurisdiction/"+id)
   }
 }

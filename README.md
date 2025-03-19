@@ -56,3 +56,16 @@ flow for form
 
 
 
+  Possible Api calls :
+1) all            get => get(URL)
+2) specific       get => get(URL)
+3) filtering      get => get(URL)
+4) sorting        get => get(URL)
+5) pagination     get => get(URL) 
+
+
+
+6) create       post=>  
+7) update       put=> 
+8) delete
+
