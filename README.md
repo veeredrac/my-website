@@ -67,5 +67,5 @@ flow for form
 
 6) create       post=>  
 7) update       put=> 
-8) delete
+8) deletedelete delete (URL /ID)
 
