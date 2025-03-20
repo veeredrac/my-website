@@ -61,7 +61,7 @@ sort(){
       (data:any)=>{
         alert("record deleted successfully ")
         this.loadVehicle();
-      },
+      }, 
       (err:any)=>{
         alert("internal server Error")
       }

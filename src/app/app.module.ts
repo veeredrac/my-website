@@ -17,7 +17,7 @@ import { RectangleComponent } from './rectangle/rectangle.component';
 import { SimpleInterestComponent } from './simple-interest/simple-interest.component';
 import { TemperatureComponent } from './temperature/temperature.component';
 import { WelcomeComponent } from './welcome/welcome.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FlipkartComponent } from './flipkart/flipkart.component';
 import { VehicleComponent } from './vehicle/vehicle.component';
 import { HttpClientModule } from "@angular/common/http";
@@ -27,6 +27,8 @@ import { EmailComponent } from './email/email.component';
 import { PinterestComponent } from './pinterest/pinterest.component';
 import { WeatherComponent } from './weather/weather.component';
 import { ErrorComponent } from './error/error.component';
+import { CreateVehicleComponent } from './create-vehicle/create-vehicle.component';
+import { CreateAccountComponent } from './create-account/create-account.component';
 
 @NgModule({
   declarations: [
@@ -52,13 +54,16 @@ import { ErrorComponent } from './error/error.component';
     EmailComponent,
     PinterestComponent,
     WeatherComponent,
-    ErrorComponent
+    ErrorComponent,
+    CreateVehicleComponent,
+    CreateAccountComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

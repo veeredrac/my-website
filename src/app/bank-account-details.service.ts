@@ -28,5 +28,9 @@ export class BankAccountDetailsService {
   getdeleteBankDetails(id:any):Observable<any>{ 
     return this._httpsClient.get("https://6128991386a213001729f9df.mockapi.io/test/v1/principals/"+id)
   }
+  createBankAccount(data:any):Observable<any>{
+    return this._httpsClient.post("https://6128991386a213001729f9df.mockapi.io/test/v1/principals",data)
+
+  } 
 
 }

@@ -1,7 +1,7 @@
 .mainBody{
     width: 100%;
     height: 100%;
-    background-color: bisque;
+  background-color: rgb(214, 213, 213);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -10,13 +10,13 @@
 .Sub{
     width: 50%;
     height: 85%;
-    background-color: blue;
+   background-color: rgb(189, 184, 184);
     border-radius: 10px;
 }
 .d1{
     width: 100%;
     height: 20%;
-    background-color: cadetblue;
+ 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -28,12 +28,11 @@
 .d2{
     width: 100%;
     height: 80%;
-    background-color: darkgoldenrod;
+   
 }
 .d2div{
     width: 100%;
     height: 25%;
-    background-color: darkturquoise;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -41,23 +40,70 @@
 .degrees{
     width: 100%;
     height: 25%;
-    background-color: blueviolet;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+}
+.degrees label{
+    font-weight: bolder;
+    font-size: xx-large;
+    color: orange;
 }
 .windtext{
     width: 100%;
     height: 25%;
-    background-color: darkblue;
+
+}
+.windtextf1{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.windtextf2{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.windtextf2 label{
+    font-weight: 500;
+    font-size: x-large;
+    color: rgb(27, 26, 24);
+}
+.windtextf1 label{
+    font-weight: 500;
+    font-size: x-large;
+    color: rgb(27, 26, 24);
 }
 .day{
     width: 100%;
     height: 25%;
-    background-color: rgb(139, 0, 125);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.day p{
+    font-weight: 500;
+    font-size:x-large;
+    color: rgb(93, 196, 219);
+    font-weight: 800;
 
 }
 .dot{
     width: 15%;
     height: 90%;
-    background-color: red;
+
+    border-radius: 100%;
+}
+#d2divDot{
+    width: 15%;
+    height: 90%;
     border-radius: 100%;
 }
 .blue{

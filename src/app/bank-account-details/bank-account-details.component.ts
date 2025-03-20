@@ -67,13 +67,13 @@ pagination(){
   )
 }
 delete(id:any){
-  if(confirm("are you sure to delet ")==true){
+  if(confirm("are you sure to delete ")==true){
   this._bankAccountDetailsService.getdeleteBankDetails(id).subscribe(
     (data:any)=>{
       console.log(data);
       alert("record is succesfully deleted .....")
       
-      this.loadBandetails()
+      this.loadBandetails();
     }
     ,(err:any)=>{
       alert("internal server issue")

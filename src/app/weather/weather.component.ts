@@ -11,13 +11,15 @@ export class WeatherComponent {
   constructor(private _weatherService:WeatherService){
     _weatherService.getWeatherDetails().subscribe(
       (data:any)=>{
-        console.log(data);
-           this.weather=data
+        console.log(data); 
+           this.weather=data;
       },
       (err:any)=>{
-        alert("invalidate data ")
+        alert("invalidate data ") 
       }
     )
-  }
 
+
+
+}
 }

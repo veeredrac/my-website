@@ -69,3 +69,31 @@ flow for form
 7) update       put=> 
 8) deletedelete delete (URL /ID)
 
+
+********************************************************
+
+1) template Driven Fprms ---> [(ngModel)]
+    => it control by html 
+    => simple 
+2) Reactive Forms    ---> 
+     =>it control by typescript 
+     => complex (multiple form adding based on requirement ) 
+ different types  of Complex  Form in Reactive Form : 
+ -----------------------------------------
+   1) FormGroup 
+   2) FormControl
+   3) Nested FormGroup
+   4) Dynamic Forms 
+   5) Form Array
+   6) validators 
+
+   create a reactive Form Model is import in ur project 
+   ReactiveDormModel
+
+     1) FormGroup   : 
+                        pulic vehivleForm:FormGroup = new FormGroup({
+                          
+                        })
+
+
+

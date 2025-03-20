@@ -22,6 +22,8 @@ import { EmailComponent } from './email/email.component';
 import { PinterestComponent } from './pinterest/pinterest.component';
 import { WeatherComponent } from './weather/weather.component';
 import { ErrorComponent } from './error/error.component';
+import { CreateVehicleComponent } from './create-vehicle/create-vehicle.component';
+import { CreateAccountComponent } from './create-account/create-account.component';
 
 const routes: Routes = [
   {path:'', component:ErrorComponent},
@@ -44,7 +46,9 @@ const routes: Routes = [
   {path:'flipkartDetails', component:FlipkartDetailsComponent},
   {path:'emails', component:EmailComponent},
   {path:'pinterest', component:PinterestComponent},
-  {path:'weather', component:WeatherComponent}
+  {path:'weather', component:WeatherComponent},
+  {path:'createVehicle', component:CreateVehicleComponent},
+  {path:'createBankAccount', component:CreateAccountComponent}
   ]},
   {path:'home', component:HomeComponent},
   {path:'login', component:LoginComponent},

@@ -5,16 +5,31 @@
         </div>
         <div class="d2"  > 
             <div class="d2div" >    
-                <div class="dot"></div>
+                <div id="d2divDot" [ngClass]="{'blue':weather.current_weather?.temperature<0,'yellow':weather.current_weather?.temperature>0 && weather.current_weather?.temperature<30,'green':weather.current_weather?.temperature>29 && weather.current_weather?.temperature<35,'red':weather.current_weather?.temperature>35}">
+                </div>
             </div>
             <div class="degrees">
-                
-            </div>
+           <label >{{weather.current_weather?.temperature}}</label><label>{{weather.current_weather_units?.temperature}}</label>
+            </div> 
             <div class="windtext">
-               
+                <div class="windtextf1">
+                <label >windspeed :</label>
+                <label >{{weather.current_weather?.windspeed+""}}</label>
+                
+                <label >{{weather.current_weather_units?.windspeed}}</label>
+            </div><br>
+            <div class="windtextf2">
+                <label>wind direction :</label>
+                <label >{{weather.current_weather?.winddirection+""}}</label>
+                
+                <label>{{weather.current_weather_units?.winddirection}}</label>
+                <label>(NE)</label>
+
             </div>
+            </div><br>
             <div class="day">
-               
+                <p *ngIf="weather.current_weather?.is_day==1">DayTime</p>
+                <p *ngIf="weather.current_weather?.is_day==0">Night</p>
             </div>
 
         </div>
