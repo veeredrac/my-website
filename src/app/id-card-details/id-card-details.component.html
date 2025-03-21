@@ -1,0 +1,69 @@
+<div class="d1">
+<input type="text" [(ngModel)]="term"  (keyup)="filter()" placeholder="enter a keyword ">
+
+<select [(ngModel)]="column">
+    <option >name</option>
+    <option >phone</option>
+    <option >dob</option>
+    <option >city</option>
+    <option >email</option>
+</select>
+   <select  [(ngModel)]="order">   
+    <option >asc</option>
+    <option >desc</option>
+   </select>
+   <button (click)="sort()">sort</button>
+
+   <select [(ngModel)]="limit">
+    <option >10</option>
+    <option >20</option>
+    <option >30</option>
+
+</select>
+   <select  [(ngModel)]="page">   
+    <option >1</option>
+    <option >2</option>
+    <option >3</option>
+   </select>
+   <button (click)="pagination()">pagination</button>
+   <button routerLink="/dashborad/createIdcard" class="btn btn-info">Create</button>
+</div>
+<div class="d2">
+<div class="mainId">
+    <div class="IdCardSize" *ngFor="let ids of idcard">
+    <div class="lgAndTt">
+        <div class="log"><img class="imageLog" src="{{ids.school_logo}}" alt=""></div>
+        <div class="title"><h6>{{ids.school_name}}</h6></div>
+    </div>
+    <div class="PHAndDts">
+        <div class="details1">
+            <label>NAME   :    </label>
+           <label >{{ids.name}}</label><br>
+            <label>PHONE   :    </label>
+            <label >{{ids.phone}}</label><br>
+            <label>DOB   :     </label>
+            <label >{{ids.dob}}</label><br>
+            <label>CITY   :   </label>
+            <label >{{ids.city}}</label><br>
+            <label>EMAIL   :  </label>
+            <label >{{ids.email}}</label>
+        </div>
+        <div class="phots">
+            <div class="photos"><img class="IdPhotoSize" src="{{ids.profile_picture}}" alt=""></div>
+        </div>
+    </div>
+    <div class="BTandDts">
+        <div class="AddAndPin">
+            <h6>Schools City :{{ids.school_city}}</h6>
+              <h6>School Pin :{{ids.school_pin}}</h6>
+        </div>
+        <div class="BtsS">
+        <button class="btn btn-info">View</button>
+        <button class="btn btn-primary">Edit</button>
+        <button (click)="delete(ids.id)" class="btn btn-danger">Delete</button>
+    </div>
+    </div>
+</div>
+</div>
+</div>
+

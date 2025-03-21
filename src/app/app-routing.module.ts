@@ -24,6 +24,8 @@ import { WeatherComponent } from './weather/weather.component';
 import { ErrorComponent } from './error/error.component';
 import { CreateVehicleComponent } from './create-vehicle/create-vehicle.component';
 import { CreateAccountComponent } from './create-account/create-account.component';
+import { IdCardDetailsComponent } from './id-card-details/id-card-details.component';
+import { CreateIdcardComponent } from './create-idcard/create-idcard.component';
 
 const routes: Routes = [
   {path:'', component:ErrorComponent},
@@ -48,7 +50,9 @@ const routes: Routes = [
   {path:'pinterest', component:PinterestComponent},
   {path:'weather', component:WeatherComponent},
   {path:'createVehicle', component:CreateVehicleComponent},
-  {path:'createBankAccount', component:CreateAccountComponent}
+  {path:'createBankAccount', component:CreateAccountComponent},
+  {path:'idcard', component:IdCardDetailsComponent},
+  {path:'createIdcard', component:CreateIdcardComponent}
   ]},
   {path:'home', component:HomeComponent},
   {path:'login', component:LoginComponent},

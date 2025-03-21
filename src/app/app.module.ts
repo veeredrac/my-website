@@ -29,6 +29,8 @@ import { WeatherComponent } from './weather/weather.component';
 import { ErrorComponent } from './error/error.component';
 import { CreateVehicleComponent } from './create-vehicle/create-vehicle.component';
 import { CreateAccountComponent } from './create-account/create-account.component';
+import { IdCardDetailsComponent } from './id-card-details/id-card-details.component';
+import { CreateIdcardComponent } from './create-idcard/create-idcard.component';
 
 @NgModule({
   declarations: [
@@ -56,7 +58,9 @@ import { CreateAccountComponent } from './create-account/create-account.componen
     WeatherComponent,
     ErrorComponent,
     CreateVehicleComponent,
-    CreateAccountComponent
+    CreateAccountComponent,
+    IdCardDetailsComponent,
+    CreateIdcardComponent
   ],
   imports: [
     BrowserModule,
