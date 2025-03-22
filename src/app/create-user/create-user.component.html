@@ -1,0 +1,104 @@
+<form [formGroup]="userForm">
+    <label>Name</label>
+    <input type="text" formControlName="name"><br>
+    <label>email</label>
+    <input type="email" formControlName="email"><br>
+    <label>password</label> 
+    <input type="password" formControlName="password"><br>
+    <label>Mobile</label>
+    <input type="number" formControlName="mobile"><br>
+    <div formGroupName="address">
+        <label >city </label>
+        <input type="text" formControlName="city"><br>
+        <label >state </label>
+        <input type="text" formControlName="state"><br>
+        <label >pincode </label>
+        <input type="number" formControlName="pincode"><br>
+    </div>
+    <label>Type :</label>
+    <input type="radio" formControlName="type" value="dayScholar">
+    <label>Day scholar</label>
+    <input type="radio" formControlName="type" value="residential">
+    <label>Residentaial</label><br>
+<div *ngIf="userForm.get('type')?.value=='dayScholar'">
+    <label>Bus feee :</label> 
+    <input type="number" formControlName="busFee"><br>
+</div>
+<div  *ngIf="userForm.get('type')?.value=='residential'">
+    <label>Hostel feee :</label> 
+    <input type="number" formControlName="hostelFee"><br>
+</div>
+
+<label>Card :</label>
+<button (click)="addcard()" class="btn btn-warning">ADD Card</button><br><br>
+<div formArrayName="cards">
+    <div *ngFor="let card of cardFormArray.controls; let i=index">
+        <div formGroupName="{{i}}"> 
+            <h2>card : {{i+1}}</h2>
+            <label>Number : </label>
+            <input type="number" formControlName="number"><br>
+            <label>expiry : </label>
+            <input type="month" formControlName="expiry"><br>
+            <label>cvv : </label>
+            <input type="number" formControlName="cvv"><br>
+            <button (click)="deleteCard(i)" class="btn btn-danger">remove card </button>
+
+        </div>
+    </div>
+
+</div>
+
+
+
+
+
+<h1>Create a Stuent information</h1>
+<label>Name   : </label>
+<input type="text"><br>
+<label>class   :</label>
+<input type="text"><br>
+<label>fatherName   :</label>
+<input type="text"><br>  
+<label>email   :</label>
+<input type="text"><br>
+<label>dob    :</label>
+<input type="text"><br>
+
+<div formGroupName="address">
+    <label >AddressLine </label>
+    <input type="text" formControlName="addressLine"><br>
+    <label >city </label>
+    <input type="text" formControlName="city"><br>
+    <label >state </label>
+    <input type="number" formControlName="state"><br>
+</div>
+
+
+<label>marks :</label>
+<button (click)="addcard()" class="btn btn-warning">add marks </button><br><br>
+<div formArrayName="marks">
+<label>class   :</label>
+<input type="text"><br>
+<label>year   :</label>
+<input type="text"><br>
+<label>percentage   :</label>
+<input type="text"><br>
+</div>
+
+
+<label>Type :</label>
+    <input type="radio" formControlName="type" value="dayScholar">
+    <label>Day scholar</label>
+    <input type="radio" formControlName="type" value="residential">
+    <label>Residentaial</label><br>
+<div *ngIf="userForm.get('type')?.value=='dayScholar'">
+    <label>Bus feee :</label> 
+    <input type="number" formControlName="busFee"><br>
+</div>
+<div  *ngIf="userForm.get('type')?.value=='residential'">
+    <label>Hostel feee :</label> 
+    <input type="number" formControlName="hostelFee"><br>
+</div>
+
+   <button (click)="submit()">submit</button>
+</form>

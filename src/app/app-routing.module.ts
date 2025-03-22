@@ -26,6 +26,8 @@ import { CreateVehicleComponent } from './create-vehicle/create-vehicle.componen
 import { CreateAccountComponent } from './create-account/create-account.component';
 import { IdCardDetailsComponent } from './id-card-details/id-card-details.component';
 import { CreateIdcardComponent } from './create-idcard/create-idcard.component';
+import { CreateUserComponent } from './create-user/create-user.component';
+import { StudentDetailsComponent } from './student-details/student-details.component';
 
 const routes: Routes = [
   {path:'', component:ErrorComponent},
@@ -52,7 +54,9 @@ const routes: Routes = [
   {path:'createVehicle', component:CreateVehicleComponent},
   {path:'createBankAccount', component:CreateAccountComponent},
   {path:'idcard', component:IdCardDetailsComponent},
-  {path:'createIdcard', component:CreateIdcardComponent}
+  {path:'createIdcard', component:CreateIdcardComponent},
+  {path:'create-user', component:CreateUserComponent},
+  {path:'student-details', component:StudentDetailsComponent}
   ]},
   {path:'home', component:HomeComponent},
   {path:'login', component:LoginComponent},

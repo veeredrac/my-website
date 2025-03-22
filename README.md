@@ -92,6 +92,7 @@ flow for form
 
      1) FormGroup   : 
                         pulic vehivleForm:FormGroup = new FormGroup({
+                          names:new FormControl(),
                           
                         })
 
