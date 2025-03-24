@@ -29,7 +29,7 @@ export class StudentDetailsComponent {
     name:new FormControl('',[Validators.required,Validators.minLength(6),Validators.maxLength(12)]),
     class:new FormControl(),
     fatherName:new FormControl(),
-    email:new FormControl(),
+    email:new FormControl(),                                                                                                 
     dob:new FormControl(),
     address: new FormGroup({
       addresLine:new FormControl(),

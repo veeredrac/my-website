@@ -58,15 +58,15 @@ flow for form
 
   Possible Api calls :
 1) all            get => get(URL)
-2) specific       get => get(URL)
+2) specific       get => get(URL/id)
 3) filtering      get => get(URL ? filter=term)
 4) sorting        get => get(URL ?sortBy=columan&order)
 5) pagination     get => get(URL) 
 
 
 
-6) create       post=>  
-7) update       put=> 
+6) create       post=>  get(URL/id)
+7) update       put=> get("URL/"+id ,data) 
 8) deletedelete delete (URL /ID)
 
 

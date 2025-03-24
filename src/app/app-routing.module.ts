@@ -28,6 +28,7 @@ import { IdCardDetailsComponent } from './id-card-details/id-card-details.compon
 import { CreateIdcardComponent } from './create-idcard/create-idcard.component';
 import { CreateUserComponent } from './create-user/create-user.component';
 import { StudentDetailsComponent } from './student-details/student-details.component';
+import { VewVehicleDetailsComponent } from './vew-vehicle-details/vew-vehicle-details.component';
 
 const routes: Routes = [
   {path:'', component:ErrorComponent},
@@ -52,11 +53,13 @@ const routes: Routes = [
   {path:'pinterest', component:PinterestComponent},
   {path:'weather', component:WeatherComponent},
   {path:'createVehicle', component:CreateVehicleComponent},
+  {path:'eidt_vehicle/:id', component:CreateVehicleComponent},
   {path:'createBankAccount', component:CreateAccountComponent},
   {path:'idcard', component:IdCardDetailsComponent},
   {path:'createIdcard', component:CreateIdcardComponent},
   {path:'create-user', component:CreateUserComponent},
-  {path:'student-details', component:StudentDetailsComponent}
+  {path:'student-details', component:StudentDetailsComponent},
+  {path:'view-details/:id', component:VewVehicleDetailsComponent}
   ]},
   {path:'home', component:HomeComponent},
   {path:'login', component:LoginComponent},

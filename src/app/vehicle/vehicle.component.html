@@ -34,7 +34,7 @@
         <th>Color</th>
         <th>Cost</th>
         <th>Fuel</th>
-        <th>Action</th>
+        <th colspan="3"  style="text-align: center;">Action</th>
     </tr>
 </thead>
 <tbody>  
@@ -44,6 +44,9 @@
         <td>{{vehicle.color}}</td>
         <td>{{vehicle.cost}}</td>
         <td>{{vehicle.fuel}}</td>
+        <td><button class="btn btn-info" routerLink="/dashborad/view-details/{{vehicle.id}}" >view</button></td>
+        <td><button class="btn btn-warning" routerLink="/dashborad/eidt_vehicle/{{vehicle.id}}" >edit</button></td>
+
         <td><button class="btn btn-danger" (click)="delete(vehicle.id)">delete</button></td>
     </tr>
 </tbody>

@@ -33,6 +33,7 @@ import { IdCardDetailsComponent } from './id-card-details/id-card-details.compon
 import { CreateIdcardComponent } from './create-idcard/create-idcard.component';
 import { CreateUserComponent } from './create-user/create-user.component';
 import { StudentDetailsComponent } from './student-details/student-details.component';
+import { VewVehicleDetailsComponent } from './vew-vehicle-details/vew-vehicle-details.component';
 
 @NgModule({
   declarations: [
@@ -64,7 +65,8 @@ import { StudentDetailsComponent } from './student-details/student-details.compo
     IdCardDetailsComponent,
     CreateIdcardComponent,
     CreateUserComponent,
-    StudentDetailsComponent
+    StudentDetailsComponent,
+    VewVehicleDetailsComponent
   ],
   imports: [
     BrowserModule,
