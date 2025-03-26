@@ -36,6 +36,12 @@ import { StudentDetailsComponent } from './student-details/student-details.compo
 import { VewVehicleDetailsComponent } from './vew-vehicle-details/vew-vehicle-details.component';
 import { ViewStudentDetailsComponent } from './view-student-details/view-student-details.component';
 import { ViewBankDetailsComponent } from './view-bank-details/view-bank-details.component';
+import { Sibling1Component } from './sibling1/sibling1.component';
+import { Sibling2Component } from './sibling2/sibling2.component';
+import { ParentComponent } from './parent/parent.component';
+import { ChildComponent } from './child/child.component';
+import { RatingComponent } from './rating/rating.component';
+import { FlipkartRatingComponent } from './flipkart-rating/flipkart-rating.component';
 
 @NgModule({
   declarations: [
@@ -70,7 +76,13 @@ import { ViewBankDetailsComponent } from './view-bank-details/view-bank-details.
     StudentDetailsComponent,
     VewVehicleDetailsComponent,
     ViewStudentDetailsComponent,
-    ViewBankDetailsComponent
+    ViewBankDetailsComponent,
+    Sibling1Component,
+    Sibling2Component,
+    ParentComponent,
+    ChildComponent,
+    RatingComponent,
+    FlipkartRatingComponent
   ],
   imports: [
     BrowserModule,

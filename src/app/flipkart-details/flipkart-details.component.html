@@ -5,7 +5,7 @@
         <div class="d2">{{flipkartdetail.category}}</div><br>
         <div class="d3">{{flipkartdetail.title |slice:0:50 }}<div><br>
         <div class="d4">RS :{{flipkartdetail.price}}</div><br>
-        <div class="d5">{{flipkartdetail.rating.rate}}</div><br>
+        <div class="d5" ><app-flipkart-rating [rating]="flipkartdetail.rating?.rate"></app-flipkart-rating></div><br>
     </div>
 </div>
 </div>

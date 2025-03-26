@@ -106,6 +106,14 @@ guard : guard are used to proteted the user detalails using guard routers
      3.CanDeactivate :when getback to that page given a confirmation 
      4. CanLoad 
      5. CanMatch
-            
+
+
+
+     Communication :   in angular is component based application 
+       there are 3 types of communication 
+        1. parent - child @import 
+        2. child - parent  @output and event emitor 
+        3. siblining communication   ( we can pass the data from different components  )
+          
 
 

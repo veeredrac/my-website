@@ -39,14 +39,14 @@
 
 }
 .d5{
-    width: 40px;
+    width: 150px;
     height: 20px;
     position: absolute;
     top: 45%;
     left: 3%;
     text-align: center;
-    background-color: rgb(96, 88, 88);
-    color: rgb(8, 3, 3);
+    /* background-color: rgb(96, 88, 88);
+    color: rgb(8, 3, 3); */
 }
 .i1{
     width: 100%;

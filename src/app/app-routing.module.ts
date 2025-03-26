@@ -32,12 +32,15 @@ import { VewVehicleDetailsComponent } from './vew-vehicle-details/vew-vehicle-de
 import { AuthenticationGuard } from './authentication.guard';
 import { ViewStudentDetailsComponent } from './view-student-details/view-student-details.component';
 import { ViewBankDetailsComponent } from './view-bank-details/view-bank-details.component';
+import { Sibling1Component } from './sibling1/sibling1.component';
+import { ParentComponent } from './parent/parent.component';
 
 const routes: Routes = [
   {path:'', component:ErrorComponent},
   {path:'dashborad', component:DashboardComponent,canActivate:[AuthenticationGuard],children:[
 
     {path:'bmi', component:BmiComponent},
+    {path:'sibling1', component:Sibling1Component},
     {path:'calcultor', component:CalcultorComponent},
     {path:'circle', component:CircleComponent},
     {path:'data-binding', component:DataBindingComponent},
@@ -58,12 +61,11 @@ const routes: Routes = [
   {path:'createVehicle', component:CreateVehicleComponent},
   {path:'eidt_vehicle/:id', component:CreateVehicleComponent},
   {path:'createBankAccount', component:CreateAccountComponent},
-
   {path:'updateBankAccount/:id', component:CreateAccountComponent},
-
   {path:'idcard', component:IdCardDetailsComponent},
   {path:'createIdcard', component:CreateIdcardComponent},
   {path:'viewBankDetails/:id', component:ViewBankDetailsComponent},
+  {path:'parent', component:ParentComponent},
 
   {path:'updateIdcard/:id', component:CreateIdcardComponent},
   {path:'create-user', component:CreateUserComponent},
