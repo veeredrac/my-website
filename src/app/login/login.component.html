@@ -1,8 +1,10 @@
 <div class="mainDiv">
     <div id="div1">
+        <form [formGroup]="loginForm">
         <h1 id="heading1">Sign In </h1>
-        <input class="size" type="text" placeholder="Email address"><br><br>
-        <input class="size" type="text" placeholder="Password"><br><br>
-        <button id="b1" >Sign in</button>
+        <input class="size" type="text" placeholder="Email address" formControlName="email"><br><br>
+        <input class="size" type="password" placeholder="Password" formControlName="password"><br><br>
+        <button id="b1" class="btn btn-primary" (click)="signIn()" >Sign in</button>
+    </form>
     </div>
 </div>

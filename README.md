@@ -96,5 +96,16 @@ flow for form
                           
                         })
 
+guard : guard are used to proteted the user detalails using guard routers 
+
+  commands for guard  : ng generate guard authentication 
+
+   they are 5 types of guard :
+     1. canActivate :check user is authentic or not check before load 
+     2.CanActuvateChild   : 
+     3.CanDeactivate :when getback to that page given a confirmation 
+     4. CanLoad 
+     5. CanMatch
+            
 
 

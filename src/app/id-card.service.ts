@@ -7,7 +7,11 @@ import { Observable } from 'rxjs';
 })
 export class IdCardService {
 
-  constructor(private _httpClient:HttpClient) { }
+  constructor(private _httpClient:HttpClient) { }   
+
+  getiddetails(id:any):Observable<any>{ 
+    return this._httpClient.get("https://6128991386a213001729f9df.mockapi.io/test/v1/student/"+id)
+  }
   getIdCardDetails():Observable<any>{
     return this._httpClient.get("https://6128991386a213001729f9df.mockapi.io/test/v1/student");
   }
@@ -31,5 +35,10 @@ export class IdCardService {
 
   deleteidCarddetails(id:any):Observable<any>{ 
     return this._httpClient.get("https://6128991386a213001729f9df.mockapi.io/test/v1/student/"+id)
+  }
+
+
+  updateidCrad(id:any,data:any):Observable<any>{
+    return this._httpClient.put("https://6128991386a213001729f9df.mockapi.io/test/v1/student/"+id , data);
   }
 }

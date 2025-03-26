@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { IdCardService } from '../id-card.service';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-create-idcard',
@@ -13,7 +13,7 @@ export class CreateIdcardComponent {
    public idcardForm:FormGroup = new FormGroup({
     name:new FormControl(),
     phone:new FormControl(),
-    dob:new FormControl(),
+    dob:new FormControl(), 
     email:new FormControl(),
     city:new FormControl(),
     school_logo:new FormControl(),
@@ -23,10 +23,50 @@ export class CreateIdcardComponent {
     school_pin:new FormControl(),
       
     })
-    constructor(private _idCardService:IdCardService,private _router:Router){}
+    id:number=0;
+    constructor(private _idCardService:IdCardService,private _router:Router,private _activatedRouter:ActivatedRoute){
+      _activatedRouter.params.subscribe(
+        (data:any)=>{
+
+          console.log(data.id);
+          this.id=data.id
+        }
+        ,(err:any)=>{
+          alert("internal server error ... ");
+        }
+      )
+
+      _idCardService.getiddetails(this.id).subscribe(
+
+        (data:any)=>{
+          console.log(data);
+          this.idcardForm.patchValue(data)
+        }
+        ,(err:any)=>{
+          alert("internal server error")
+        }
+      )
+    }
     create(){
-  
-      console.log(this.idcardForm.value);
+      if(this.id)
+        {
+          console.log(this.idcardForm.value);
+          this._idCardService.updateidCrad(this.id,this.idcardForm.value).subscribe(
+            (data:any)=>{
+              console.log(data);
+              alert("update record is successfully");
+              this._router.navigateByUrl("/dashborad/idcard")
+            },
+            (err:any)=>{
+              alert("internal Server Error111 ")
+              
+            }
+          )
+    
+        
+      }
+      else{
+        console.log(this.idcardForm.value);
       this._idCardService.createidcard(this.idcardForm.value).subscribe(
         (data:any)=>{
           console.log(data);
@@ -38,6 +78,7 @@ export class CreateIdcardComponent {
           
         }
       )
+      }
       
     }
 

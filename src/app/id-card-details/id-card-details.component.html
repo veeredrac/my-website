@@ -59,12 +59,12 @@
               <h6>School Pin :{{ids.school_pin}}</h6>
         </div>
         <div class="BtsS">
-        <button class="btn btn-info">View</button>
-        <button class="btn btn-primary">Edit</button>
+        <button class="btn btn-info" routerLink="/dashborad/viewStudent-details/{{ids.id}}" >View</button>   
+        <button class="btn btn-primary" routerLink="/dashborad/updateIdcard/{{ids.id}}" >Edit</button>
         <button (click)="delete(ids.id)" class="btn btn-danger">Delete</button>
     </div>
     </div>
 </div>
-</div>
+</div> 
 </div>
 

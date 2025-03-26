@@ -40,7 +40,7 @@ sort(){
         alert("internal server issue ")
       }
     )
-  }
+  }  
 
   loadVehicle(){
     this._vehicleService.getVehicles().subscribe(

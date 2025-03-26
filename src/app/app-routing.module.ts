@@ -29,10 +29,13 @@ import { CreateIdcardComponent } from './create-idcard/create-idcard.component';
 import { CreateUserComponent } from './create-user/create-user.component';
 import { StudentDetailsComponent } from './student-details/student-details.component';
 import { VewVehicleDetailsComponent } from './vew-vehicle-details/vew-vehicle-details.component';
+import { AuthenticationGuard } from './authentication.guard';
+import { ViewStudentDetailsComponent } from './view-student-details/view-student-details.component';
+import { ViewBankDetailsComponent } from './view-bank-details/view-bank-details.component';
 
 const routes: Routes = [
   {path:'', component:ErrorComponent},
-  {path:'dashborad', component:DashboardComponent,children:[
+  {path:'dashborad', component:DashboardComponent,canActivate:[AuthenticationGuard],children:[
 
     {path:'bmi', component:BmiComponent},
     {path:'calcultor', component:CalcultorComponent},
@@ -55,11 +58,18 @@ const routes: Routes = [
   {path:'createVehicle', component:CreateVehicleComponent},
   {path:'eidt_vehicle/:id', component:CreateVehicleComponent},
   {path:'createBankAccount', component:CreateAccountComponent},
+
+  {path:'updateBankAccount/:id', component:CreateAccountComponent},
+
   {path:'idcard', component:IdCardDetailsComponent},
   {path:'createIdcard', component:CreateIdcardComponent},
+  {path:'viewBankDetails/:id', component:ViewBankDetailsComponent},
+
+  {path:'updateIdcard/:id', component:CreateIdcardComponent},
   {path:'create-user', component:CreateUserComponent},
   {path:'student-details', component:StudentDetailsComponent},
-  {path:'view-details/:id', component:VewVehicleDetailsComponent}
+  {path:'view-details/:id', component:VewVehicleDetailsComponent},
+  {path:'viewStudent-details/:id', component:ViewStudentDetailsComponent}
   ]},
   {path:'home', component:HomeComponent},
   {path:'login', component:LoginComponent},

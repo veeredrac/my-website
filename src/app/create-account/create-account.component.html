@@ -1,3 +1,5 @@
+<h1 *ngIf="!id">create account details </h1>
+<h1 *ngIf="id">update account details </h1>
 <form  [formGroup]="bankForm">
     <label>account_name : </label>
     <input type="text" formControlName="account_name"><br>
@@ -7,5 +9,5 @@
     <input type="text" formControlName="available_balance"><br>
     <label>city :</label>
     <input type="text" formControlName="city"> <br>
-    <button routerLink="/dashborad/bankaccountDetails" (click)="create()">Create Account</button>
+    <button routerLink="/dashborad/bankaccountDetails" (click)="create()">{{id?"update account details ":"create account details"}}</button>
 </form>

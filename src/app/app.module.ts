@@ -34,6 +34,8 @@ import { CreateIdcardComponent } from './create-idcard/create-idcard.component';
 import { CreateUserComponent } from './create-user/create-user.component';
 import { StudentDetailsComponent } from './student-details/student-details.component';
 import { VewVehicleDetailsComponent } from './vew-vehicle-details/vew-vehicle-details.component';
+import { ViewStudentDetailsComponent } from './view-student-details/view-student-details.component';
+import { ViewBankDetailsComponent } from './view-bank-details/view-bank-details.component';
 
 @NgModule({
   declarations: [
@@ -66,7 +68,9 @@ import { VewVehicleDetailsComponent } from './vew-vehicle-details/vew-vehicle-de
     CreateIdcardComponent,
     CreateUserComponent,
     StudentDetailsComponent,
-    VewVehicleDetailsComponent
+    VewVehicleDetailsComponent,
+    ViewStudentDetailsComponent,
+    ViewBankDetailsComponent
   ],
   imports: [
     BrowserModule,

@@ -24,7 +24,7 @@ export class CreateVehicleComponent {
       (data:any)=>{
         console.log(data.id);
         this.id=data.id;
-
+   
       },
       (err:any)=>{
         alert("internal server error");
@@ -54,7 +54,7 @@ export class CreateVehicleComponent {
         (data:any)=>{
           console.log(data);
           alert("update record is successfully");
-          this._router.navigateByUrl("/dashborad/vehicle")
+          this._router.navigateByUrl("/dashborad/idcard")
         },
         (err:any)=>{
           alert("internal Server Error111 ")

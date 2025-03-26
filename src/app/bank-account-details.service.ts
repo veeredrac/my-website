@@ -6,11 +6,21 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class BankAccountDetailsService {
-
+ 
  
   constructor(private  _httpsClient:HttpClient){}
   getBankDetails():Observable<any>{ 
     return this._httpsClient.get("https://6128991386a213001729f9df.mockapi.io/test/v1/principals")
+  }
+
+ 
+
+  getUpdateBankDetails(id:any,data:any):Observable<any>{ 
+    return this._httpsClient.put("https://6128991386a213001729f9df.mockapi.io/test/v1/principals/"+id, data)
+  }
+
+  getviewBankDetails(id:any):Observable<any>{ 
+    return this._httpsClient.get("https://6128991386a213001729f9df.mockapi.io/test/v1/principals/"+id)
   }
   getfilterBankDetails(term:any):Observable<any>{
     return this._httpsClient.get("https://6128991386a213001729f9df.mockapi.io/test/v1/principals?filter="+term)

@@ -1,5 +1,7 @@
 <div class="parent">
 <form  [formGroup]="idcardForm">
+    <h1 *ngIf="!id">id card is create </h1>
+    <h1 *ngIf="id">id card update </h1>
     <label>name </label>
     <input type="text" formControlName="name"><br>
     <label>phone</label>`
@@ -8,7 +10,7 @@
     <input type="text" formControlName="dob"><br>
     <label>city</label>
     <input type="text" formControlName="city"> <br>
-    <label>email</label>
+    <label>email</label> 
     <input type="text" formControlName="email"> <br>
     <label>profile_picture</label>
     <input type="text" formControlName="profile_picture"> <br>
@@ -19,10 +21,8 @@
     <label>school_name</label>
     <input type="text" formControlName="school_name"> <br>
     <label>school_pin</label>
-    <input type="text" formControlName="school_pin"> <br>
-
-
-    <button  routerLink="/dashborad/idcard" (click)="create()">Create idcard</button>
+    <input type="text" formControlName="school_pin"> <br> 
+    <button (click)="create()">{{id?'update idcard':'create idcard'}}</button>
 </form>
 </div>
 

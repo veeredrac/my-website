@@ -35,7 +35,7 @@
         <th>account_number</th>
         <th>available_balance</th>
         <th>city</th>
-        <th>Action</th>
+        <th colspan="3">Action</th>
     </tr>
 </thead> 
 <tbody>
@@ -45,6 +45,12 @@
         <td>{{bandetail.account_number}}</td>
         <td>{{bandetail.available_balance}}</td>
         <td>{{bandetail.city}}</td>
+        <td >
+            <button  routerLink="/dashborad/viewBankDetails/{{bandetail.id}}" class="btn btn-info">view</button>
+        </td>
+        <td >
+            <button   routerLink="/dashborad/updateBankAccount/{{bandetail.id}}"  class="btn btn-warning">edit</button>
+        </td>
         <td >
             <button (click)="delete(bandetail.id)" class="btn btn-danger">delete</button>
         </td>

@@ -83,8 +83,8 @@ sort(){
     this._idCardService.deleteidCarddetails(id).subscribe(
       (data:any)=>{
         alert("record deleted successfully ")
-        this.loadIdCardDetails();
-      }, 
+        this.loadIdCardDetails(); 
+      },     
       (err:any)=>{
         alert("internal server Error")
       }
