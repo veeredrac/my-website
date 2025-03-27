@@ -42,6 +42,9 @@ import { ParentComponent } from './parent/parent.component';
 import { ChildComponent } from './child/child.component';
 import { RatingComponent } from './rating/rating.component';
 import { FlipkartRatingComponent } from './flipkart-rating/flipkart-rating.component';
+import { TextCountComponent } from './text-count/text-count.component';
+import { CapitalDirective } from './capital.directive';
+import { BalancePipe } from './balance.pipe';
 
 @NgModule({
   declarations: [
@@ -82,7 +85,10 @@ import { FlipkartRatingComponent } from './flipkart-rating/flipkart-rating.compo
     ParentComponent,
     ChildComponent,
     RatingComponent,
-    FlipkartRatingComponent
+    FlipkartRatingComponent,
+    TextCountComponent,
+    CapitalDirective,
+    BalancePipe
   ],
   imports: [
     BrowserModule,

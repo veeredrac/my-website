@@ -43,7 +43,7 @@
         <td>{{i+1}}</td>
         <td>{{bandetail.account_name}}</td>
         <td>{{bandetail.account_number}}</td>
-        <td>{{bandetail.available_balance}}</td>
+        <td>{{bandetail.available_balance | balance}}</td>
         <td>{{bandetail.city}}</td>
         <td >
             <button  routerLink="/dashborad/viewBankDetails/{{bandetail.id}}" class="btn btn-info">view</button>

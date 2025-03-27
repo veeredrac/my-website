@@ -117,3 +117,14 @@ guard : guard are used to proteted the user detalails using guard routers
           
 
 
+
+
+
+
+
+git branch (it is show the current branch )
+
+git fetch (it checking the changes in repository)
+git checkout branchName  (it changing branch in local project )
+
+git pull requrest 

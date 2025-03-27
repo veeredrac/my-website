@@ -1,0 +1,21 @@
+.t1{
+   width: 90%;
+   height: 70%;
+    box-sizing: border-box;
+    resize: none;
+    position: relative;
+    display:inline-block;  
+}
+.d1{
+    width: 50%;
+    height: 25%;
+    background-color:white;
+}
+p{
+    width: 50px;
+    height: 30px;
+    background-color: green;
+    position: absolute;
+   bottom: 15px;
+   right: 20%;
+}
