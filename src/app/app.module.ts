@@ -43,6 +43,7 @@ import { ChildComponent } from './child/child.component';
 import { RatingComponent } from './rating/rating.component';
 import { FlipkartRatingComponent } from './flipkart-rating/flipkart-rating.component';
 import { TokenInterceptor } from './token.interceptor';
+import { AboutUsModule } from './about-us/about-us.module';
 
 @NgModule({
   declarations: [
@@ -90,7 +91,8 @@ import { TokenInterceptor } from './token.interceptor';
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    AboutUsModule
   ],
   providers: [{
     provide:HTTP_INTERCEPTORS,

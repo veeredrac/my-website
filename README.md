@@ -149,6 +149,7 @@ guard : guard are used to proteted the user detalails using guard routers
 
 
 
+
 5. custom api : dummy use the this custom api . 
 create json file with static data and call that static data in service method 
 build some functionality . 
@@ -160,8 +161,6 @@ build some functionality .
 clone : 
 
 7. custom commands : to disign our own commands we use this custome commands. we want to apply the custom commands open package.json : {
-
-
    "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -171,3 +170,42 @@ clone :
      "veera": "ng serve",==> like that we want to create own commands 
   },
 }
+
+loading technique :
+   
+
+
+1) easer loading : 
+-----------------------------------------------------------------
+  ==>   create a new module use this commands : 
+  ng g m about-us 
+  create a components like {
+
+take integrated terminal generate commands 
+    ng g c about-ceo,
+    ng c about-company 
+  }
+  => to link about-us module in angular application 
+   step 1 : app.module.ts file {
+
+    import the aboutModule ,
+   }
+   -------------------------------------------------------
+
+   2) lazy loading : it used to click on perticular router link then , it will load it , otherwise it not working .
+   createing lazy module components using this commands :{
+    ng g m payment--routing 
+   }
+   step create 2 componts 
+   1. card  
+   2.upi 
+   open payment module and giving the routing link and using path and component 
+
+   -> then open routing module .ts file giving the routing {
+
+
+    {
+      path:'payment'
+      loadingChildren:()=>('./payment/payment.module');
+    }
+   }
