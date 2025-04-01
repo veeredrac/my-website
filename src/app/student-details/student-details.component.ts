@@ -36,7 +36,6 @@ export class StudentDetailsComponent {
       city:new FormControl(),
       state:new FormControl(),
        pincode: new FormControl()
-
     }),
     type:new FormControl(),
     marks:new FormArray([]),

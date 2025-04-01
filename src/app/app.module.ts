@@ -20,7 +20,7 @@ import { WelcomeComponent } from './welcome/welcome.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FlipkartComponent } from './flipkart/flipkart.component';
 import { VehicleComponent } from './vehicle/vehicle.component';
-import { HttpClientModule } from "@angular/common/http";
+import { HTTP_INTERCEPTORS, HttpClientModule } from "@angular/common/http";
 import { BankAccountDetailsComponent } from './bank-account-details/bank-account-details.component';
 import { FlipkartDetailsComponent } from './flipkart-details/flipkart-details.component';
 import { EmailComponent } from './email/email.component';
@@ -42,6 +42,7 @@ import { ParentComponent } from './parent/parent.component';
 import { ChildComponent } from './child/child.component';
 import { RatingComponent } from './rating/rating.component';
 import { FlipkartRatingComponent } from './flipkart-rating/flipkart-rating.component';
+import { TokenInterceptor } from './token.interceptor';
 
 @NgModule({
   declarations: [
@@ -91,7 +92,11 @@ import { FlipkartRatingComponent } from './flipkart-rating/flipkart-rating.compo
     HttpClientModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [{
+    provide:HTTP_INTERCEPTORS,
+    useClass:TokenInterceptor,
+    multi:true
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
 import { BankAccountDetailsService } from '../bank-account-details.service';
 import { ActivatedRoute, Route, Router } from '@angular/router';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { googleMail } from '../validator';
 
 @Component({
   selector: 'app-create-account',

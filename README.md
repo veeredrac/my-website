@@ -114,6 +114,60 @@ guard : guard are used to proteted the user detalails using guard routers
         1. parent - child @import 
         2. child - parent  @output and event emitor 
         3. siblining communication   ( we can pass the data from different components  )
+
+
+    
+    3. custom data : it is used to restric the user . missuase the data from end user . 
+        
+          step 1 : create interface is {
+            ng generate interface user 
+          }
+          step 2: in interface declared the attribute is {
+            interface User{
+              name :string ,
+              email:string,
+              age:number 
+            }
+          }
+          step 3 : inside the component initialize the user interface data {
+            class welcome{
+              user:User={
+                name:'abc',
+                email:'abc@gmail.com'
+                age : 28
+              }
+            }
+          }
+          step 4 : to display the value in html welcome.html {
+            <h1>{{user.name}}</h1>
+             <h1>{{user.email}}</h1>
+              <h1>{{user.age}}</h1>
+          }
           
 
+4. custom validatorn:   
 
+
+
+5. custom api : dummy use the this custom api . 
+create json file with static data and call that static data in service method 
+build some functionality . 
+
+6. interceptor : it used to token along with api call , it mainly use the private api
+  -> we want to access the data every time requrest to the api insteaded of create interceptor we can access the multiple private api . 
+
+*************  clone ******** 
+clone : 
+
+7. custom commands : to disign our own commands we use this custome commands. we want to apply the custom commands open package.json : {
+
+
+   "scripts": {
+    "ng": "ng",
+    "start": "ng serve",
+    "build": "ng build",
+    "watch": "ng build --watch --configuration development",
+    "test": "ng test"
+     "veera": "ng serve",==> like that we want to create own commands 
+  },
+}

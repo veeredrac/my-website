@@ -2,9 +2,15 @@
     <label>Name</label>
     <input type="text" formControlName="name"><br>
     <label>email</label>
-    <input type="email" formControlName="email"><br>
+    <input type="email" formControlName="email" ><br>
+    <div *ngIf="userForm.get('email')?.touched && userForm.get('email')?.invalid">
+        <p *ngIf="userForm.get('email')?.errors?.['required']">email is required</p>
+        <p *ngIf="userForm.get('email')?.errors?.['minLength']">email should be minimun 6 character</p>
+        <p *ngIf="userForm.get('email')?.errors?.['maxLength']">email should be maximun of 12 characters</p>
+        <p *ngIf="userForm.get('email')?.errors?.['GoogleMail']">please enter only google mails</p>
+    </div>
     <label>password</label> 
-    <input type="password" formControlName="password"><br>
+    <input type="password" formControlName="password"><br> 
     <label>Mobile</label>
     <input type="number" formControlName="mobile"><br>
     <div formGroupName="address">
@@ -19,7 +25,7 @@
     <input type="radio" formControlName="type" value="dayScholar">
     <label>Day scholar</label>
     <input type="radio" formControlName="type" value="residential">
-    <label>Residentaial</label><br>
+    <label>Residentaial</label><br>        
 <div *ngIf="userForm.get('type')?.value=='dayScholar'">
     <label>Bus feee :</label> 
     <input type="number" formControlName="busFee"><br>
@@ -99,6 +105,5 @@
     <label>Hostel feee :</label> 
     <input type="number" formControlName="hostelFee"><br>
 </div>
-
    <button (click)="submit()">submit</button>
 </form>

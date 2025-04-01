@@ -10,8 +10,8 @@ export class VehicleService {
   constructor(private _httpClient:HttpClient) { 
     
   }
-   
-  baseUrl:string="https://6128991386a213001729f9df.mockapi.io/test/v1/jurisdiction";
+  baseUrl:string="assets/data.json";
+  // baseUrl:string="https://6128991386a213001729f9df.mockapi.io/test/v1/jurisdiction";
   getVehicles():Observable<any>{ 
     return this._httpClient.get(this.baseUrl)  
   }
@@ -20,7 +20,7 @@ export class VehicleService {
     return this._httpClient.get(this.baseUrl+"/"+id)
   }
 
-  getFiltervehicleDetails( term:any):Observable<any>{
+  getFiltervehicleDetails( term:any):Observable<any>{ 
     return this._httpClient.get(this.baseUrl+"?filter="+term)
   }
 
@@ -28,8 +28,9 @@ export class VehicleService {
     return this._httpClient.get(this.baseUrl+"?sortBy="+column+"&order="+order)
   }
 
+ 
   deleteVehicledetails(id:any):Observable<any>{ 
-    return this._httpClient.get(this.baseUrl+"/"+id)
+    return this._httpClient.get(this.baseUrl+"/"+id) 
   }
   getpaginationvehicleDetails(limit:any,page:any):Observable<any>{
     return this._httpClient.get(this.baseUrl+"?limit="+limit+"&page="+page)
