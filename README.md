@@ -13,7 +13,7 @@ requrest : there some methods  :
                |                    |
                |  ----------------- | <= response
                |                    |
-       (client)|                    | (servce)
+       (client)|                    | (server)
 
 
        200+ status  code : resopnes succes 
@@ -170,12 +170,12 @@ clone :
      "veera": "ng serve",==> like that we want to create own commands 
   },
 }
-
+=========================================================================================================
 loading technique :
    
 
 
-1) easer loading : 
+1) eager loading : 
 -----------------------------------------------------------------
   ==>   create a new module use this commands : 
   ng g m about-us 
@@ -190,7 +190,7 @@ take integrated terminal generate commands
 
     import the aboutModule ,
    }
-   -------------------------------------------------------
+   -------------------------------------------------------------------------------------------------------
 
    2) lazy loading : it used to click on perticular router link then , it will load it , otherwise it not working .
    createing lazy module components using this commands :{
@@ -209,3 +209,48 @@ take integrated terminal generate commands
       loadingChildren:()=>('./payment/payment.module');
     }
    }
+----------------------------------------------------------------------------------------------
+   3. preloading : 
+
+
+=========================================================================================================
+Build : 
+to buliding in two ways   
+    1. AOT(ahead of time ) --> it compile the code while build  
+    code (ng build ) --> transfilen (ts to js ) --> compile (html , css , js )  --> bundle(optimize js ) --> downloading in broswer --> run 
+    optiizatio technques :{
+      1. minification {it looking for comments , spaces , variable etc when we convert into js small   cheunks file }
+   2. treshaking {it unused method and functionality will  remove when run the code }
+    }
+    -------------------------------------------------------------------------
+    2.JIT(just in time ) --> it using in developent only 
+
+life cycle of hooks :
+1. ng onchange ==>{
+
+there an any change it will reflicts the onchageses EX :  @input 
+
+}
+2. ng OnInit ==>{
+  when the component is loading , we use the onInit for function , constructor also having same features 
+
+}
+3. ng Docheck ==>{
+
+}
+4. ng afterviewInt ==>{
+   where an dom change trigar the view 
+
+}
+5. ng afterviewchecked ==>{
+
+}
+6. ng after content init ==>{
+
+}
+7. bg after content chacked  ==>{
+
+}
+6. ng on destory ==>{
+
+}

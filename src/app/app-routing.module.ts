@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { BmiComponent } from './bmi/bmi.component';
 import { CalcultorComponent } from './calcultor/calcultor.component';
@@ -71,7 +71,8 @@ const routes: Routes = [
   {path:'create-user', component:CreateUserComponent},
   {path:'student-details', component:StudentDetailsComponent},
   {path:'view-details/:id', component:VewVehicleDetailsComponent},
-  {path:'viewStudent-details/:id', component:ViewStudentDetailsComponent}
+  {path:'viewStudent-details/:id', component:ViewStudentDetailsComponent},
+ 
   ]},
   {path:'home', component:HomeComponent},
   {path:'login', component:LoginComponent},
@@ -79,7 +80,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes , {preloadingStrategy:PreloadAllModules})],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
