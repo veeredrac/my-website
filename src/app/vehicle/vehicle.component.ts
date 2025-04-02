@@ -56,7 +56,7 @@ sort(){
 
   delete(id:any){
 
-    if(confirm("are sure to delete ?")==true){
+    if(confirm("are sure to delete ?")==true){ 
     this._vehicleService.deleteVehicledetails(id).subscribe(
       (data:any)=>{
         alert("record deleted successfully ")

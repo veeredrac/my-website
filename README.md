@@ -13,7 +13,7 @@ requrest : there some methods  :
                |                    |
                |  ----------------- | <= response
                |                    |
-       (client)|                    | (servce)
+       (client)|                    | (server)
 
 
        200+ status  code : resopnes succes 
@@ -114,6 +114,143 @@ guard : guard are used to proteted the user detalails using guard routers
         1. parent - child @import 
         2. child - parent  @output and event emitor 
         3. siblining communication   ( we can pass the data from different components  )
+
+
+    
+    3. custom data : it is used to restric the user . missuase the data from end user . 
+        
+          step 1 : create interface is {
+            ng generate interface user 
+          }
+          step 2: in interface declared the attribute is {
+            interface User{
+              name :string ,
+              email:string,
+              age:number 
+            }
+          }
+          step 3 : inside the component initialize the user interface data {
+            class welcome{
+              user:User={
+                name:'abc',
+                email:'abc@gmail.com'
+                age : 28
+              }
+            }
+          }
+          step 4 : to display the value in html welcome.html {
+            <h1>{{user.name}}</h1>
+             <h1>{{user.email}}</h1>
+              <h1>{{user.age}}</h1>
+          }
           
 
+4. custom validatorn:   
 
+
+
+
+5. custom api : dummy use the this custom api . 
+create json file with static data and call that static data in service method 
+build some functionality . 
+
+6. interceptor : it used to token along with api call , it mainly use the private api
+  -> we want to access the data every time requrest to the api insteaded of create interceptor we can access the multiple private api . 
+
+*************  clone ******** 
+clone : 
+
+7. custom commands : to disign our own commands we use this custome commands. we want to apply the custom commands open package.json : {
+   "scripts": {
+    "ng": "ng",
+    "start": "ng serve",
+    "build": "ng build",
+    "watch": "ng build --watch --configuration development",
+    "test": "ng test"
+     "veera": "ng serve",==> like that we want to create own commands 
+  },
+}
+=========================================================================================================
+loading technique :
+   
+
+
+1) eager loading : 
+-----------------------------------------------------------------
+  ==>   create a new module use this commands : 
+  ng g m about-us 
+  create a components like {
+
+take integrated terminal generate commands 
+    ng g c about-ceo,
+    ng c about-company 
+  }
+  => to link about-us module in angular application 
+   step 1 : app.module.ts file {
+
+    import the aboutModule ,
+   }
+   -------------------------------------------------------------------------------------------------------
+
+   2) lazy loading : it used to click on perticular router link then , it will load it , otherwise it not working .
+   createing lazy module components using this commands :{
+    ng g m payment--routing 
+   }
+   step create 2 componts 
+   1. card  
+   2.upi 
+   open payment module and giving the routing link and using path and component 
+
+   -> then open routing module .ts file giving the routing {
+
+
+    {
+      path:'payment'
+      loadingChildren:()=>('./payment/payment.module');
+    }
+   }
+----------------------------------------------------------------------------------------------
+   3. preloading : 
+
+
+=========================================================================================================
+Build : 
+to buliding in two ways   
+    1. AOT(ahead of time ) --> it compile the code while build  
+    code (ng build ) --> transfilen (ts to js ) --> compile (html , css , js )  --> bundle(optimize js ) --> downloading in broswer --> run 
+    optiizatio technques :{
+      1. minification {it looking for comments , spaces , variable etc when we convert into js small   cheunks file }
+   2. treshaking {it unused method and functionality will  remove when run the code }
+    }
+    -------------------------------------------------------------------------
+    2.JIT(just in time ) --> it using in developent only 
+
+life cycle of hooks :
+1. ng onchange ==>{
+
+there an any change it will reflicts the onchageses EX :  @input 
+
+}
+2. ng OnInit ==>{
+  when the component is loading , we use the onInit for function , constructor also having same features 
+
+}
+3. ng Docheck ==>{
+
+}
+4. ng afterviewInt ==>{
+   where an dom change trigar the view 
+
+}
+5. ng afterviewchecked ==>{
+
+}
+6. ng after content init ==>{
+
+}
+7. bg after content chacked  ==>{
+
+}
+6. ng on destory ==>{
+
+}
