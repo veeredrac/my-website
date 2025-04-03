@@ -34,6 +34,7 @@ import { ViewStudentDetailsComponent } from './view-student-details/view-student
 import { ViewBankDetailsComponent } from './view-bank-details/view-bank-details.component';
 import { Sibling1Component } from './sibling1/sibling1.component';
 import { ParentComponent } from './parent/parent.component';
+import { LifeCycleHooksComponent } from './life-cycle-hooks/life-cycle-hooks.component';
 
 const routes: Routes = [
   {path:'', component:ErrorComponent},
@@ -66,7 +67,7 @@ const routes: Routes = [
   {path:'createIdcard', component:CreateIdcardComponent},
   {path:'viewBankDetails/:id', component:ViewBankDetailsComponent},
   {path:'parent', component:ParentComponent},
-
+  {path:'lifeCycleHooks', component:LifeCycleHooksComponent},
   {path:'updateIdcard/:id', component:CreateIdcardComponent},
   {path:'create-user', component:CreateUserComponent},
   {path:'student-details', component:StudentDetailsComponent},

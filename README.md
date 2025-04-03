@@ -109,7 +109,7 @@ guard : guard are used to proteted the user detalails using guard routers
 
 
 
-     Communication :   in angular is component based application 
+     Communication :   in angular is component based application  i 
        there are 3 types of communication 
         1. parent - child @import 
         2. child - parent  @output and event emitor 
@@ -117,3 +117,5 @@ guard : guard are used to proteted the user detalails using guard routers
           
 
 
+
+main .js =>  application logic prsent 
